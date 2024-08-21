@@ -1,0 +1,28 @@
+# [project]
+# name = "pyme-login"
+# authors = [
+#     { name = "shenjack", email = "3695888@qq.com"}
+# ]
+# requires-python = ">=3.8"
+# description = "pyme-login"
+# readme = "README.md"
+# license = {text = "MIT"}
+
+[tool.ruff]
+target-version = "py38"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "I001",    # import 顺序还是算了
+    "ARG002",  # 不用的参数就是占位嘛
+    "ANN401",  # typing 里还是允许 Any 的
+    "FBT",     # 我就用 True False
+    "S101",    # 允许 assert
+    "D205",    # 文档字符串那么严格干嘛
+    "D102",    # 又不是所有函数都有文档
+    "D103",    # 又不是所有函数都有文档
+    "PLR0913", # 多点参数又怎样
+    "ERA001",  # 我就注释代码怎么滴
+]
